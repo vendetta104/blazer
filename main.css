@@ -176,6 +176,7 @@ nav h1 {
     }
 
     #shoutout {
+        align-items: end;
         color: #ffffff;
-        allign-items: end;
+        
     }
