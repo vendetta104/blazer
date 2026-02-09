@@ -104,6 +104,29 @@ nav h1 {
     transform: scale(1.01);
 }
 
+#nes-games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: .6vw;
+    padding-bottom: 5vw;
+
+}
+ 
+#nes-games img {    height: 15.6vw;
+    width: 15.6vw;
+    height: calc(15.6vw * 10 / 7);
+    border-radius: 1vw;
+    margin: .5vw;
+    cursor: pointer;
+    user-select: none;
+    transition: transform .2s;
+}
+ 
+#nes-games img:hover {
+    transform: scale(1.01);
+}
+
 .featured {
     display: flex;
     flex-direction: row;
