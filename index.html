@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
 </head>
 <body>
+  <audio id="lobbyMusic" loop hidden>
+    <source src="lobby.mp3" type="audio/mpeg">
+</audio>
+<script>
+    document.addEventListener("click", function () {
+        const music = document.getElementById("lobbyMusic");
+        music.volume = 0.35; // adjust volume here
+        music.play();
+    }, { once: true });
+</script>
     <nav>
         <h1>BLAZER</h1>
 
@@ -153,6 +163,11 @@ Emulation (BETA)
         <a href="games/growagarden/"><img src="images/growagarden.png" alt="growagarden"></a>
         <a href="games/stealabrainrot/"><img src="images/stealabrainrot.png"alt="stealabrainrot"></a>
         <a href="games/tag/"><img src="images/tag.jpeg" alt="tag"></a>
+        <a href="games/clashofvikings/"><img src="images/clashofvikings.png" alt="clashofvikings"></a>
+        <a href="games/zombsroyale/"><img src="images/zombsroyale.png" alt="zombsroyale"></a>
+        <a href="games/google-snake/"><img src="images/snake.png" alt="snake"></a>
+        <a href="games/unfairmario/"><img src="images/unfairmario.png" alt="unfairmario"></a>
+
     </div>
     </div>
 </body>
