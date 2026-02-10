@@ -172,6 +172,7 @@ nav h1 {
  
 #n64-games img:hover {
     transform: scale(1.01);
+}
 
 #snes-games {
     display: flex;
@@ -179,17 +180,19 @@ nav h1 {
     justify-content: center;
     margin-top: .6vw;
     padding-bottom: 5vw;
-}
 
+}
+ 
 #snes-games img {
-    width: 15.6vw;
-    height: calc(15.6vw * 5.9 / 4.9);
+    width: 15.6vw; /* same width as NES/N64 boxes */
+    height: calc(15.6vw * 5.9 / 4.9); /* maintain SNES box aspect ratio */
     border-radius: 1vw;
     margin: 0.5vw;
     cursor: pointer;
     user-select: none;
     transition: transform 0.2s;
 }
+
  
 #snes-games img:hover {
     transform: scale(1.01);
