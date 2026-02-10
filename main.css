@@ -184,8 +184,8 @@ nav h1 {
 }
  
 #snes-games img {
-    width: 15.6vw; /* same width as NES/N64 boxes */
-    height: calc(15.6vw * 5.9 / 4.9); /* maintain SNES box aspect ratio */
+    width: 15.6vw;
+    height: calc(15.6vw * 5.9 / 4.9);
     border-radius: 1vw;
     margin: 0.5vw;
     cursor: pointer;
