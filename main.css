@@ -179,9 +179,8 @@ nav h1 {
     justify-content: center;
     margin-top: .6vw;
     padding-bottom: 5vw;
-
 }
- 
+
 #snes-games img {
     width: 15.6vw;
     height: calc(15.6vw * 5.9 / 4.9);
@@ -194,7 +193,7 @@ nav h1 {
  
 #snes-games img:hover {
     transform: scale(1.01);
-
+}
 
 .featured {
     display: flex;
