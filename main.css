@@ -151,53 +151,6 @@ nav h1 {
     transform: scale(1.01);
 }
 
-#n64-games {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: .6vw;
-    padding-bottom: 5vw;
-
-}
- 
-#n64-games img {
-    width: 17.5vw;
-    height: 19.6vw;
-    border-radius: 1vw;
-    margin: 0.5vw;
-    cursor: pointer;
-    user-select: none;
-    transition: transform 0.2s;
-}
- 
-#n64-games img:hover {
-    transform: scale(1.01);
-}
-
-#snes-games {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: .6vw;
-    padding-bottom: 5vw;
-
-}
- 
-#snes-games img {
-    width: 17.5vw;
-    height: 21.1vw;
-    border-radius: 1vw;
-    margin: 0.5vw;
-    cursor: pointer;
-    user-select: none;
-    transition: transform 0.2s;
-}
-
- 
-#snes-games img:hover {
-    transform: scale(1.01);
-}
-
 .featured {
     display: flex;
     flex-direction: row;
