@@ -10,6 +10,17 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
 </head>
 <body>
+  <audio id="lobbyMusic" loop hidden>
+    <source src="lobby.mp3" type="audio/mpeg">
+</audio>
+<script>
+    document.addEventListener("click", function () {
+        const music = document.getElementById("lobbyMusic");
+        music.volume = 0.35; // adjust volume here
+        music.play();
+    }, { once: true });
+</script>
+    <nav>
         <h1>BLAZER</h1>
 
     </nav>
@@ -143,8 +154,8 @@ Click me to request any games or fix!
         <a href="games/zombsroyale/"><img src="images/zombsroyale.png" alt="zombsroyale"></a>
         <a href="games/google-snake/"><img src="images/snake.png" alt="snake"></a>
         <a href="games/unfairmario/"><img src="images/unfairmario.png" alt="unfairmario"></a>
-    </div>
 
+    </div>
 
     <div id="nes-games">
       <a href="games/emulatorjs/nes/smb/"><img src="images/smb.png" alt="smb1"></a>
@@ -152,14 +163,15 @@ Click me to request any games or fix!
       <a href="games/emulatorjs/nes/tetris/"><img src="images/tetris.png" alt="tetris"></a>
       <a href="games/emulatorjs/nes/legendofzelda/"><img src="images/legendofzelda.png" alt="legendofzelda"></a>
       <a href="games/emulatorjs/nes/punchout/"><img src="images/punchout.png" alt="punchout"></a>
-    </div>
 
+    </div>
 
     <div id="gameboy-games">
       <a href="games/emulatorjs/gameboy/pokemonblue/"><img src="images/pokemonblue.png" alt="pokemonblue"></a>
       <a href="games/emulatorjs/gameboy/pokemonred/"><img src="images/pokemonred.png" alt="pokemonred"></a>
       <a href="games/emulatorjs/gameboy/pokemonyellow/"><img src="images/pokemonyellow.png" alt="pokemonyellow"></a>
       <a href="games/emulatorjs/gameboy/tetris/"><img src="images/tetrisgb.png" alt="tetrisgb></a>
+
     </div>
     </div>
 </body>
