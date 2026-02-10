@@ -122,10 +122,35 @@ nav h1 {
     user-select: none;
     transition: transform .2s;
 }
- 
 #nes-games img:hover {
     transform: scale(1.01);
 }
+
+
+
+#gameboy-games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: .6vw;
+    padding-bottom: 5vw;
+
+}
+ 
+#gameboy-games img {
+    width: 15.6vw;
+    height: 15.6vw;
+    border-radius: 1vw;
+    margin: .5vw;
+    cursor: pointer;
+    user-select: none;
+    transition: transform .2s;
+}
+ 
+#gameboy-games img:hover {
+    transform: scale(1.01);
+}
+
 
 .featured {
     display: flex;
