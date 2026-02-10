@@ -161,8 +161,8 @@ nav h1 {
 }
  
 #n64-games img {
-    width: 15.6vw;
-    height: calc(15.6vw * 5.5 / 4.9);
+    width: 17.5vw;
+    height: 19.6vw;
     border-radius: 1vw;
     margin: 0.5vw;
     cursor: pointer;
@@ -184,8 +184,8 @@ nav h1 {
 }
  
 #snes-games img {
-    width: 15.6vw;
-    height: calc(15.6vw * 5.9 / 4.9);
+    width: 17.5vw;
+    height: 21.1vw;
     border-radius: 1vw;
     margin: 0.5vw;
     cursor: pointer;
