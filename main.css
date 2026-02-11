@@ -126,6 +126,50 @@ nav h1 {
     transform: scale(1.01);
 }
 
+#snes-games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: .6vw;
+    padding-bottom: 5vw;
+
+}
+ 
+#snes-games img {
+    width: 15.6vw;
+    height: 12.3vw;
+    border-radius: 1vw;
+    margin: .5vw;
+    cursor: pointer;
+    user-select: none;
+    transition: transform .2s;
+}
+ 
+#snes-games img:hover {
+    transform: scale(1.01);
+}
+
+#n64-games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: .6vw;
+    padding-bottom: 5vw;
+
+}
+ 
+#n64-games img {
+    width: 15.6vw;
+    height: 11.7vw;
+    border-radius: 1vw;
+    margin: .5vw;
+    cursor: pointer;
+    user-select: none;
+    transition: transform .2s;
+}
+#n64-games img:hover {
+    transform: scale(1.01);
+}
 
 
 #gameboy-games {
