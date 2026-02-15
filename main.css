@@ -195,6 +195,28 @@ nav h1 {
     transform: scale(1.01);
 }
 
+#other {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: .6vw;
+    padding-bottom: 5vw;
+
+}
+ 
+#other img {    height: 15.6vw;
+    width: 15.6vw;
+    border-radius: 1vw;
+    margin: .5vw;
+    cursor: pointer;
+    user-select: none;
+    transition: transform .2s;
+}
+ 
+#other img:hover {
+    transform: scale(1.01);
+}
+
 
 .featured {
     display: flex;
