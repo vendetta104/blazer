@@ -196,7 +196,7 @@ nav h1 {
 }
 
 
-#other {
+#others {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -205,7 +205,7 @@ nav h1 {
 
 }
  
-#other img {    height: 15.6vw;
+#others img {    height: 15.6vw;
     width: 15.6vw;
     border-radius: 1vw;
     margin: .5vw;
@@ -214,7 +214,7 @@ nav h1 {
     transition: transform .2s;
 }
  
-#other img:hover {
+#others img:hover {
     transform: scale(1.01);
 }
 
