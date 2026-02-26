@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FNAF Launcher</title>
+<link rel="icon" href="assets/favicon.png">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    background: #0b0b0b;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 230px;
+    background: linear-gradient(to bottom, #111, #0d0d0d);
+    padding-top: 40px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.version {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+}
+
+.version:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+.version.active {
+    background: rgba(255,255,255,0.05);
+}
+
+.version.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #1db954;
+}
+
+.version img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+/* Main Preview */
+.main {
+    flex: 1;
+    position: relative;
+}
+
+.preview {
+    width: 100%;
+    height: 100%;
+}
+
+.preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+/* Dark overlay */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
+}
+
+/* Play Button */
+.play-btn {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 18px 120px;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    background: #1db954;
+    cursor: pointer;
+    transition: 0.2s;
+    letter-spacing: 1px;
+}
+
+.play-btn:hover {
+    background: #22d163;
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>FNAF</h2>
+
+    <div class="version active" onclick="selectVersion(this,'FNAF 1')">
+        <img src="assets/icon1.png">
+        FNAF 1
+    </div>
+
+    <div class="version" onclick="selectVersion(this,'FNAF 2')">
+        <img src="assets/icon2.png">
+        FNAF 2
+    </div>
+
+    <div class="version" onclick="selectVersion(this,'FNAF 3')">
+        <img src="assets/icon3.png">
+        FNAF 3
+    </div>
+
+    <div class="version" onclick="selectVersion(this,'FNAF 4')">
+        <img src="assets/icon4.png">
+        FNAF 4
+    </div>
+</div>
+
+<div class="main">
+    <div class="preview">
+        <img id="previewImage" src="assets/fnaf1.png">
+    </div>
+
+    <div class="overlay"></div>
+
+    <button class="play-btn" onclick="launch()">PLAY</button>
+</div>
+
+<script>
+let selected = "FNAF 1";
+
+function selectVersion(element, name) {
+    document.querySelectorAll(".version").forEach(v => v.classList.remove("active"));
+    element.classList.add("active");
+
+    selected = name;
+
+    const preview = document.getElementById("previewImage");
+    const fileName = name.toLowerCase().replace(" ", "");
+
+    preview.style.opacity = 0;
+
+    setTimeout(() => {
+        preview.src = `assets/${fileName}.png`;
+        preview.style.opacity = 1;
+    }, 200);
+}
+
+function launch() {
+    const gameMap = {
+        "FNAF 1": "fnaf1/index.html",
+        "FNAF 2": "fnaf2/index.html",
+        "FNAF 3": "fnaf3/index.html",
+        "FNAF 4": "fnaf4/index.html"
+    };
+
+    const gameLink = gameMap[selected];
+    if (!gameLink) return;
+
+    window.location.href = gameLink;
+}
+</script>
+
+</body>
+</html>
