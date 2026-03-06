@@ -349,7 +349,7 @@ hr {
 
 .playButton:hover {
     cursor: pointer;
-    background-image: url(/assets/images/playhover.png);
+    background-image: url(../assets/images/play-hover.png);
     transform: scale(1.05);
 }
 
