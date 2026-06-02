@@ -18,13 +18,17 @@
   <script>
     document.addEventListener("click", function () {
       const music = document.getElementById("lobbyMusic");
-      music.volume = 0.35;
-      music.play();
+      music.volume = 0.35; music.play();
     }, { once: true });
   </script>
 
-  <!-- Animated background canvas -->
-  <canvas id="bgCanvas"></canvas>
+  <!-- iNite-style background -->
+  <div class="bg-canvas">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="bg-dots"></div>
 
   <!-- NAV -->
   <nav>
@@ -40,38 +44,31 @@
   <!-- HERO / FEATURED -->
   <section class="hero">
     <div class="hero-label">🔥 Popular Right Now</div>
-    <div class="featured-grid">
-
-      <a href="games/1v1lol/" class="feat-card feat-tall">
+    <div class="featured-grid" id="featuredGrid">
+      <a href="games/1v1lol/" class="feat-card" data-name="1v1.LOL" data-desc="Build, shoot, and outplay your opponents in this fast-paced 1v1 action game." data-img="images/1v1lol.png">
         <img src="images/1v1lol.png" alt="1v1.LOL">
         <div class="feat-overlay"><span>1v1.LOL</span><i class="fa-solid fa-play"></i></div>
       </a>
-
-      <a href="games/slope/" class="feat-card feat-tall">
+      <a href="games/slope/" class="feat-card" data-name="Slope" data-desc="Race down an endless 3D slope, dodging obstacles at breakneck speed." data-img="images/slope.jpg">
         <img src="images/slope.jpg" alt="Slope">
         <div class="feat-overlay"><span>Slope</span><i class="fa-solid fa-play"></i></div>
       </a>
-
-      <a href="games/amplerlauncher/" class="feat-card feat-wide">
+      <a href="games/amplerlauncher/" class="feat-card" data-name="Minecraft" data-desc="The ultimate sandbox game. Build, explore, and survive in an infinite world." data-img="images/mc.png">
         <img src="images/mc.png" alt="Minecraft">
         <div class="feat-overlay"><span>Minecraft</span><i class="fa-solid fa-play"></i></div>
       </a>
-
-      <a href="games/drive-mad/" class="feat-card feat-wide">
+      <a href="games/drive-mad/" class="feat-card" data-name="Drive Mad" data-desc="Keep your vehicle balanced as you speed across wild, physics-defying tracks." data-img="images/drive-mad.jpg">
         <img src="images/drive-mad.jpg" alt="Drive Mad">
         <div class="feat-overlay"><span>Drive Mad</span><i class="fa-solid fa-play"></i></div>
       </a>
-
-      <a href="games/bitlife/" class="feat-card feat-tall">
+      <a href="games/bitlife/" class="feat-card" data-name="BitLife" data-desc="Live a virtual life from birth to death. Every choice you make shapes your story." data-img="images/bitlife.png">
         <img src="images/bitlife.png" alt="BitLife">
         <div class="feat-overlay"><span>BitLife</span><i class="fa-solid fa-play"></i></div>
       </a>
-
-      <a href="games/subway-surfers-ny/" class="feat-card feat-tall">
+      <a href="games/subway-surfers-ny/" class="feat-card" data-name="Subway Surfers" data-desc="Run, dodge, and surf through busy subway tracks while escaping the inspector." data-img="images/subwaysurfers.png">
         <img src="images/subwaysurfers.png" alt="Subway Surfers">
         <div class="feat-overlay"><span>Subway Surfers</span><i class="fa-solid fa-play"></i></div>
       </a>
-
     </div>
   </section>
 
@@ -90,63 +87,62 @@
       <h2>Browser Games</h2>
       <div class="section-line"></div>
     </div>
-
     <div id="games" class="game-grid">
-      <a href="games/bob-the-robber-2/" class="game-card"><img src="images/bob-the-robber-2.png" alt="bob the robber 2"><div class="game-label">Bob the Robber 2</div></a>
-      <a href="games/vex3/" class="game-card"><img src="images/vex3.jpg" alt="vex3"><div class="game-label">Vex 3</div></a>
-      <a href="games/vex4/" class="game-card"><img src="images/vex4.jpg" alt="vex4"><div class="game-label">Vex 4</div></a>
-      <a href="games/vex5/" class="game-card"><img src="images/vex5.jpg" alt="vex5"><div class="game-label">Vex 5</div></a>
-      <a href="games/vex6/" class="game-card"><img src="images/vex6.jpeg" alt="vex 6"><div class="game-label">Vex 6</div></a>
-      <a href="games/vex7/" class="game-card"><img src="images/vex7.jpeg" alt="vex 7"><div class="game-label">Vex 7</div></a>
-      <a href="games/amplerlauncher/" class="game-card"><img src="images/mc.png" alt="ampierlauncher"><div class="game-label">Minecraft</div></a>
-      <a href="games/moto-x3m/" class="game-card"><img src="images/moto-x3m.jpg" alt="moto x3m"><div class="game-label">Moto X3M</div></a>
-      <a href="games/retro-bowl/" class="game-card"><img src="images/retro-bowl.jpg" alt="retrobowl"><div class="game-label">Retro Bowl</div></a>
-      <a href="games/drive-mad/" class="game-card"><img src="images/drive-mad.jpg" alt="drive mad"><div class="game-label">Drive Mad</div></a>
-      <a href="games/slope/" class="game-card"><img src="images/slope.jpg" alt="slope"><div class="game-label">Slope</div></a>
-      <a href="games/motox3m2/" class="game-card"><img src="images/motox3m2.jpg" alt="moto x3m2"><div class="game-label">Moto X3M 2</div></a>
-      <a href="games/fireboywatergirl/" class="game-card"><img src="images/fireboywatergirl.png" alt="fireboywatergirl"><div class="game-label">Fireboy & Watergirl</div></a>
-      <a href="games/bitlife/" class="game-card"><img src="images/bitlife.png" alt="bitlife"><div class="game-label">BitLife</div></a>
-      <a href="games/eel-slap/" class="game-card"><img src="images/eel-slap.png" alt="eel-slap"><div class="game-label">Eel Slap</div></a>
-      <a href="games/osu!/" class="game-card"><img src="images/osu!.png" alt="osu!"><div class="game-label">osu!</div></a>
-      <a href="games/papasburgeria/" class="game-card"><img src="images/papasburgeria.jpg" alt="papasburgeria"><div class="game-label">Papa's Burgeria</div></a>
-      <a href="games/papaspizzaria/" class="game-card"><img src="images/papaspizzaria.jpg" alt="papaspizzeria"><div class="game-label">Papa's Pizzeria</div></a>
-      <a href="games/Rocket-League/" class="game-card"><img src="images/rocketleague.png" alt="rocket-league"><div class="game-label">Rocket League</div></a>
-      <a href="games/subway-surfers-ny/" class="game-card"><img src="images/subwaysurfers.png" alt="subway-surfers"><div class="game-label">Subway Surfers</div></a>
-      <a href="games/sandboxels/" class="game-card"><img src="images/sandboxels.png" alt="sandboxels"><div class="game-label">Sandboxels</div></a>
-      <a href="games/shellshockers/" class="game-card"><img src="images/shellshockers.png" alt="shellshockers"><div class="game-label">Shell Shockers</div></a>
-      <a href="games/superhot/" class="game-card"><img src="images/superhot.jpg" alt="superhot"><div class="game-label">Superhot</div></a>
-      <a href="games/temple-run-2/" class="game-card"><img src="images/templerun2.png" alt="temple-run-2"><div class="game-label">Temple Run 2</div></a>
-      <a href="games/there-is-no-game/" class="game-card"><img src="images/thereisnogame.png" alt="there-is-no-game"><div class="game-label">There Is No Game</div></a>
-      <a href="games/1v1lol/" class="game-card"><img src="images/1v1lol.png" alt="1v1.LOL"><div class="game-label">1v1.LOL</div></a>
-      <a href="games/jetpack-joyride/" class="game-card"><img src="images/jetpack-joyride.jpg" alt="jetpack-joyride"><div class="game-label">Jetpack Joyride</div></a>
-      <a href="games/baldis-basics/" class="game-card"><img src="images/baldisbasics.png" alt="baldisbasics"><div class="game-label">Baldi's Basics</div></a>
-      <a href="games/basket-random/" class="game-card"><img src="images/basketrandom.jpeg" alt="basket-random"><div class="game-label">Basket Random</div></a>
-      <a href="games/boxing-random/" class="game-card"><img src="images/boxingrandom.jpg" alt="boxing-random"><div class="game-label">Boxing Random</div></a>
-      <a href="games/soccer-random/" class="game-card"><img src="images/soccerrandom.png" alt="soccerrandom"><div class="game-label">Soccer Random</div></a>
-      <a href="games/volley-random/" class="game-card"><img src="images/volleyrandom.png" alt="volley-random"><div class="game-label">Volley Random</div></a>
-      <a href="games/tunnel-rush/" class="game-card"><img src="images/tunnelrush.jpg" alt="tunnelrush"><div class="game-label">Tunnel Rush</div></a>
-      <a href="games/aquapark-slides/" class="game-card"><img src="images/aquapark.png" alt="aquapark"><div class="game-label">Aquapark Slides</div></a>
-      <a href="games/cookie-clicker/" class="game-card"><img src="images/cookieclicker.png" alt="cookie-clicker"><div class="game-label">Cookie Clicker</div></a>
-      <a href="games/impossiblequiz/" class="game-card"><img src="images/impossiblequiz.png" alt="impossiblequiz"><div class="game-label">Impossible Quiz</div></a>
-      <a href="games/basketbros-io" class="game-card"><img src="images/basketbros.jpg" alt="basketbros"><div class="game-label">BasketBros</div></a>
-      <a href="games/drift-hunters" class="game-card"><img src="images/drifthunters.png" alt="drifthunters"><div class="game-label">Drift Hunters</div></a>
-      <a href="games/paperio2" class="game-card"><img src="images/paperio2.png" alt="paperio2"><div class="game-label">Paper.io 2</div></a>
-      <a href="games/soccer-skills" class="game-card"><img src="images/soccerskills.png" alt="soccer-skills"><div class="game-label">Soccer Skills</div></a>
-      <a href="games/tiny-fishing" class="game-card"><img src="images/tinyfishing.png" alt="tinyfishing"><div class="game-label">Tiny Fishing</div></a>
-      <a href="games/madalin-stunt-cars-3/" class="game-card"><img src="images/madalinstuntcars3.png" alt="madalinstuntcars3"><div class="game-label">Madalin Stunt Cars 3</div></a>
-      <a href="games/geometrydash/" class="game-card"><img src="images/geodashlite.png" alt="geometrydash"><div class="game-label">Geometry Dash</div></a>
-      <a href="games/bloxors/" class="game-card"><img src="images/bloxors.png" alt="bloxors"><div class="game-label">Bloxorz</div></a>
-      <a href="games/stickmanhook/" class="game-card"><img src="images/stickmanhook.png" alt="stickmanhook"><div class="game-label">Stickman Hook</div></a>
-      <a href="games/blumgislime/" class="game-card"><img src="images/blumgislime.png" alt="blumgislime"><div class="game-label">Blumgi Slime</div></a>
-      <a href="games/crossyroad/" class="game-card"><img src="images/crossyroad.png" alt="crossyroad"><div class="game-label">Crossy Road</div></a>
-      <a href="games/growagarden/" class="game-card"><img src="images/growagarden.png" alt="growagarden"><div class="game-label">Grow a Garden</div></a>
-      <a href="games/stealabrainrot/" class="game-card"><img src="images/stealabrainrot.png" alt="stealabrainrot"><div class="game-label">Steal a Brainrot</div></a>
-      <a href="games/tag/" class="game-card"><img src="images/tag.jpeg" alt="tag"><div class="game-label">Tag</div></a>
-      <a href="games/clashofvikings/" class="game-card"><img src="images/clashofvikings.png" alt="clashofvikings"><div class="game-label">Clash of Vikings</div></a>
-      <a href="games/zombsroyale/" class="game-card"><img src="images/zombsroyale.png" alt="zombsroyale"><div class="game-label">Zombs Royale</div></a>
-      <a href="games/google-snake/" class="game-card"><img src="images/snake.png" alt="snake"><div class="game-label">Google Snake</div></a>
-      <a href="games/unfairmario/" class="game-card"><img src="images/unfairmario.png" alt="unfairmario"><div class="game-label">Unfair Mario</div></a>
-      <a href="games/fnaf/" class="game-card"><img src="images/fnaf.png" alt="fnaf"><div class="game-label">FNaF</div></a>
+      <a href="games/bob-the-robber-2/" class="game-card" data-name="Bob the Robber 2" data-desc="Sneak through guarded buildings and outsmart security systems in this stealth puzzle game." data-img="images/bob-the-robber-2.png"><img src="images/bob-the-robber-2.png" alt="bob the robber 2"><div class="game-label">Bob the Robber 2</div></a>
+      <a href="games/vex3/" class="game-card" data-name="Vex 3" data-desc="Navigate deadly obstacle courses with precise jumps, slides, and wall-climbs." data-img="images/vex3.jpg"><img src="images/vex3.jpg" alt="vex3"><div class="game-label">Vex 3</div></a>
+      <a href="games/vex4/" class="game-card" data-name="Vex 4" data-desc="A challenging stickman platformer with traps, spikes, and clever level design." data-img="images/vex4.jpg"><img src="images/vex4.jpg" alt="vex4"><div class="game-label">Vex 4</div></a>
+      <a href="games/vex5/" class="game-card" data-name="Vex 5" data-desc="More deadly obstacles, new moves, and trickier challenges await in Vex 5." data-img="images/vex5.jpg"><img src="images/vex5.jpg" alt="vex5"><div class="game-label">Vex 5</div></a>
+      <a href="games/vex6/" class="game-card" data-name="Vex 6" data-desc="Push your platforming skills to the limit in the sixth installment of Vex." data-img="images/vex6.jpeg"><img src="images/vex6.jpeg" alt="vex 6"><div class="game-label">Vex 6</div></a>
+      <a href="games/vex7/" class="game-card" data-name="Vex 7" data-desc="The latest and most intense chapter in the beloved Vex platformer series." data-img="images/vex7.jpeg"><img src="images/vex7.jpeg" alt="vex 7"><div class="game-label">Vex 7</div></a>
+      <a href="games/amplerlauncher/" class="game-card" data-name="Minecraft" data-desc="The ultimate sandbox game. Build, explore, and survive in an infinite world." data-img="images/mc.png"><img src="images/mc.png" alt="minecraft"><div class="game-label">Minecraft</div></a>
+      <a href="games/moto-x3m/" class="game-card" data-name="Moto X3M" data-desc="Perform insane stunts on a dirt bike through explosive obstacle courses." data-img="images/moto-x3m.jpg"><img src="images/moto-x3m.jpg" alt="moto x3m"><div class="game-label">Moto X3M</div></a>
+      <a href="games/retro-bowl/" class="game-card" data-name="Retro Bowl" data-desc="Manage and play your own football team in this retro-style American football game." data-img="images/retro-bowl.jpg"><img src="images/retro-bowl.jpg" alt="retrobowl"><div class="game-label">Retro Bowl</div></a>
+      <a href="games/drive-mad/" class="game-card" data-name="Drive Mad" data-desc="Keep your vehicle balanced as you speed across wild, physics-defying tracks." data-img="images/drive-mad.jpg"><img src="images/drive-mad.jpg" alt="drive mad"><div class="game-label">Drive Mad</div></a>
+      <a href="games/slope/" class="game-card" data-name="Slope" data-desc="Race down an endless 3D slope, dodging obstacles at breakneck speed." data-img="images/slope.jpg"><img src="images/slope.jpg" alt="slope"><div class="game-label">Slope</div></a>
+      <a href="games/motox3m2/" class="game-card" data-name="Moto X3M 2" data-desc="More tracks, more stunts, more explosions — the sequel to the hit bike racer." data-img="images/motox3m2.jpg"><img src="images/motox3m2.jpg" alt="moto x3m2"><div class="game-label">Moto X3M 2</div></a>
+      <a href="games/fireboywatergirl/" class="game-card" data-name="Fireboy &amp; Watergirl" data-desc="A co-op puzzle platformer where fire and water must work together to survive." data-img="images/fireboywatergirl.png"><img src="images/fireboywatergirl.png" alt="fireboywatergirl"><div class="game-label">Fireboy &amp; Watergirl</div></a>
+      <a href="games/bitlife/" class="game-card" data-name="BitLife" data-desc="Live a virtual life from birth to death. Every choice you make shapes your story." data-img="images/bitlife.png"><img src="images/bitlife.png" alt="bitlife"><div class="game-label">BitLife</div></a>
+      <a href="games/eel-slap/" class="game-card" data-name="Eel Slap" data-desc="The iconic interactive experience — drag to slap a man in the face with an eel." data-img="images/eel-slap.png"><img src="images/eel-slap.png" alt="eel-slap"><div class="game-label">Eel Slap</div></a>
+      <a href="games/osu!/" class="game-card" data-name="osu!" data-desc="A rhythm game where you click circles, follow sliders, and spin spinners to the beat." data-img="images/osu!.png"><img src="images/osu!.png" alt="osu!"><div class="game-label">osu!</div></a>
+      <a href="games/papasburgeria/" class="game-card" data-name="Papa's Burgeria" data-desc="Flip burgers and serve customers in this classic time-management cooking game." data-img="images/papasburgeria.jpg"><img src="images/papasburgeria.jpg" alt="papasburgeria"><div class="game-label">Papa's Burgeria</div></a>
+      <a href="games/papaspizzaria/" class="game-card" data-name="Papa's Pizzeria" data-desc="Take orders, bake pizzas, and keep customers happy in Papa's pizza shop." data-img="images/papaspizzaria.jpg"><img src="images/papaspizzaria.jpg" alt="papaspizzeria"><div class="game-label">Papa's Pizzeria</div></a>
+      <a href="games/Rocket-League/" class="game-card" data-name="Rocket League" data-desc="Soccer meets rocket-powered cars in this high-octane competitive sports game." data-img="images/rocketleague.png"><img src="images/rocketleague.png" alt="rocket-league"><div class="game-label">Rocket League</div></a>
+      <a href="games/subway-surfers-ny/" class="game-card" data-name="Subway Surfers" data-desc="Run, dodge, and surf through busy subway tracks while escaping the inspector." data-img="images/subwaysurfers.png"><img src="images/subwaysurfers.png" alt="subway-surfers"><div class="game-label">Subway Surfers</div></a>
+      <a href="games/sandboxels/" class="game-card" data-name="Sandboxels" data-desc="A falling-sand simulation game with hundreds of interactive elements and reactions." data-img="images/sandboxels.png"><img src="images/sandboxels.png" alt="sandboxels"><div class="game-label">Sandboxels</div></a>
+      <a href="games/shellshockers/" class="game-card" data-name="Shell Shockers" data-desc="A multiplayer first-person shooter where you play as an egg armed to the teeth." data-img="images/shellshockers.png"><img src="images/shellshockers.png" alt="shellshockers"><div class="game-label">Shell Shockers</div></a>
+      <a href="games/superhot/" class="game-card" data-name="Superhot" data-desc="Time only moves when you move — a mind-bending first-person shooter experience." data-img="images/superhot.jpg"><img src="images/superhot.jpg" alt="superhot"><div class="game-label">Superhot</div></a>
+      <a href="games/temple-run-2/" class="game-card" data-name="Temple Run 2" data-desc="Run, jump, and slide away from a demonic monkey through ancient temple ruins." data-img="images/templerun2.png"><img src="images/templerun2.png" alt="temple-run-2"><div class="game-label">Temple Run 2</div></a>
+      <a href="games/there-is-no-game/" class="game-card" data-name="There Is No Game" data-desc="A hilarious meta-comedy game that constantly breaks the fourth wall." data-img="images/thereisnogame.png"><img src="images/thereisnogame.png" alt="there-is-no-game"><div class="game-label">There Is No Game</div></a>
+      <a href="games/1v1lol/" class="game-card" data-name="1v1.LOL" data-desc="Build, shoot, and outplay your opponents in this fast-paced 1v1 action game." data-img="images/1v1lol.png"><img src="images/1v1lol.png" alt="1v1.LOL"><div class="game-label">1v1.LOL</div></a>
+      <a href="games/jetpack-joyride/" class="game-card" data-name="Jetpack Joyride" data-desc="Strap on a jetpack and blast through a lab while dodging zappers and missiles." data-img="images/jetpack-joyride.jpg"><img src="images/jetpack-joyride.jpg" alt="jetpack-joyride"><div class="game-label">Jetpack Joyride</div></a>
+      <a href="games/baldis-basics/" class="game-card" data-name="Baldi's Basics" data-desc="A creepy parody of educational games where Baldi chases you through school." data-img="images/baldisbasics.png"><img src="images/baldisbasics.png" alt="baldisbasics"><div class="game-label">Baldi's Basics</div></a>
+      <a href="games/basket-random/" class="game-card" data-name="Basket Random" data-desc="Wacky one-button basketball with ragdoll physics and unpredictable fun." data-img="images/basketrandom.jpeg"><img src="images/basketrandom.jpeg" alt="basket-random"><div class="game-label">Basket Random</div></a>
+      <a href="games/boxing-random/" class="game-card" data-name="Boxing Random" data-desc="Chaotic one-button boxing with ragdoll fighters and random arenas." data-img="images/boxingrandom.jpg"><img src="images/boxingrandom.jpg" alt="boxing-random"><div class="game-label">Boxing Random</div></a>
+      <a href="games/soccer-random/" class="game-card" data-name="Soccer Random" data-desc="One-button soccer with unpredictable physics and hilarious ragdoll players." data-img="images/soccerrandom.png"><img src="images/soccerrandom.png" alt="soccerrandom"><div class="game-label">Soccer Random</div></a>
+      <a href="games/volley-random/" class="game-card" data-name="Volley Random" data-desc="Volleyball with random rules, physics, and mayhem every single round." data-img="images/volleyrandom.png"><img src="images/volleyrandom.png" alt="volley-random"><div class="game-label">Volley Random</div></a>
+      <a href="games/tunnel-rush/" class="game-card" data-name="Tunnel Rush" data-desc="Fly through a neon tunnel at insane speeds, dodging every obstacle in your path." data-img="images/tunnelrush.jpg"><img src="images/tunnelrush.jpg" alt="tunnelrush"><div class="game-label">Tunnel Rush</div></a>
+      <a href="games/aquapark-slides/" class="game-card" data-name="Aquapark Slides" data-desc="Race down giant water slides, knock off opponents, and reach the finish first." data-img="images/aquapark.png"><img src="images/aquapark.png" alt="aquapark"><div class="game-label">Aquapark Slides</div></a>
+      <a href="games/cookie-clicker/" class="game-card" data-name="Cookie Clicker" data-desc="Click a cookie to make more cookies. Then build an empire of cookies." data-img="images/cookieclicker.png"><img src="images/cookieclicker.png" alt="cookie-clicker"><div class="game-label">Cookie Clicker</div></a>
+      <a href="games/impossiblequiz/" class="game-card" data-name="Impossible Quiz" data-desc="Answer the most absurd and tricky questions. Logic won't save you here." data-img="images/impossiblequiz.png"><img src="images/impossiblequiz.png" alt="impossiblequiz"><div class="game-label">Impossible Quiz</div></a>
+      <a href="games/basketbros-io" class="game-card" data-name="BasketBros" data-desc="Fast-paced 2D basketball with character upgrades and head-to-head multiplayer." data-img="images/basketbros.jpg"><img src="images/basketbros.jpg" alt="basketbros"><div class="game-label">BasketBros</div></a>
+      <a href="games/drift-hunters" class="game-card" data-name="Drift Hunters" data-desc="Tune your car and drift around massive tracks. Score big with perfect slides." data-img="images/drifthunters.png"><img src="images/drifthunters.png" alt="drifthunters"><div class="game-label">Drift Hunters</div></a>
+      <a href="games/paperio2" class="game-card" data-name="Paper.io 2" data-desc="Claim territory on a shared board. Cut off rivals before they cut you off." data-img="images/paperio2.png"><img src="images/paperio2.png" alt="paperio2"><div class="game-label">Paper.io 2</div></a>
+      <a href="games/soccer-skills" class="game-card" data-name="Soccer Skills" data-desc="Dribble past defenders, dodge tackles, and score in this arcade soccer game." data-img="images/soccerskills.png"><img src="images/soccerskills.png" alt="soccer-skills"><div class="game-label">Soccer Skills</div></a>
+      <a href="games/tiny-fishing" class="game-card" data-name="Tiny Fishing" data-desc="Cast your line and catch fish to earn coins and upgrade your gear." data-img="images/tinyfishing.png"><img src="images/tinyfishing.png" alt="tinyfishing"><div class="game-label">Tiny Fishing</div></a>
+      <a href="games/madalin-stunt-cars-3/" class="game-card" data-name="Madalin Stunt Cars 3" data-desc="Drive exotic supercars and pull off insane stunts in a massive open world." data-img="images/madalinstuntcars3.png"><img src="images/madalinstuntcars3.png" alt="madalinstuntcars3"><div class="game-label">Madalin Stunt Cars 3</div></a>
+      <a href="games/geometrydash/" class="game-card" data-name="Geometry Dash" data-desc="Rhythm-based platformer with precise jumps and electrifying soundtracks." data-img="images/geodashlite.png"><img src="images/geodashlite.png" alt="geometrydash"><div class="game-label">Geometry Dash</div></a>
+      <a href="games/bloxors/" class="game-card" data-name="Bloxorz" data-desc="Roll a block across suspended platforms and into the hole without falling off." data-img="images/bloxors.png"><img src="images/bloxors.png" alt="bloxors"><div class="game-label">Bloxorz</div></a>
+      <a href="games/stickmanhook/" class="game-card" data-name="Stickman Hook" data-desc="Swing from hook to hook like a stickman Spider-Man through colorful levels." data-img="images/stickmanhook.png"><img src="images/stickmanhook.png" alt="stickmanhook"><div class="game-label">Stickman Hook</div></a>
+      <a href="games/blumgislime/" class="game-card" data-name="Blumgi Slime" data-desc="Jump and bounce your slime to the exit across quirky physics-based levels." data-img="images/blumgislime.png"><img src="images/blumgislime.png" alt="blumgislime"><div class="game-label">Blumgi Slime</div></a>
+      <a href="games/crossyroad/" class="game-card" data-name="Crossy Road" data-desc="Hop across roads, rivers, and train tracks in this endless arcade hopper." data-img="images/crossyroad.png"><img src="images/crossyroad.png" alt="crossyroad"><div class="game-label">Crossy Road</div></a>
+      <a href="games/growagarden/" class="game-card" data-name="Grow a Garden" data-desc="Plant, water, and grow your dream garden in this relaxing idle game." data-img="images/growagarden.png"><img src="images/growagarden.png" alt="growagarden"><div class="game-label">Grow a Garden</div></a>
+      <a href="games/stealabrainrot/" class="game-card" data-name="Steal a Brainrot" data-desc="The wildest heist game you'll play today. Steal the brainrot at all costs." data-img="images/stealabrainrot.png"><img src="images/stealabrainrot.png" alt="stealabrainrot"><div class="game-label">Steal a Brainrot</div></a>
+      <a href="games/tag/" class="game-card" data-name="Tag" data-desc="Classic tag reimagined as a fast-paced browser game. Don't get caught!" data-img="images/tag.jpeg"><img src="images/tag.jpeg" alt="tag"><div class="game-label">Tag</div></a>
+      <a href="games/clashofvikings/" class="game-card" data-name="Clash of Vikings" data-desc="Command Viking warriors in epic battles to claim supremacy over the land." data-img="images/clashofvikings.png"><img src="images/clashofvikings.png" alt="clashofvikings"><div class="game-label">Clash of Vikings</div></a>
+      <a href="games/zombsroyale/" class="game-card" data-name="Zombs Royale" data-desc="A top-down 2D battle royale. Be the last one standing in the shrinking zone." data-img="images/zombsroyale.png"><img src="images/zombsroyale.png" alt="zombsroyale"><div class="game-label">Zombs Royale</div></a>
+      <a href="games/google-snake/" class="game-card" data-name="Google Snake" data-desc="The classic snake game reimagined by Google. Eat, grow, don't hit yourself." data-img="images/snake.png"><img src="images/snake.png" alt="snake"><div class="game-label">Google Snake</div></a>
+      <a href="games/unfairmario/" class="game-card" data-name="Unfair Mario" data-desc="Mario but every level is packed with hidden traps designed to destroy you." data-img="images/unfairmario.png"><img src="images/unfairmario.png" alt="unfairmario"><div class="game-label">Unfair Mario</div></a>
+      <a href="games/fnaf/" class="game-card" data-name="Five Nights at Freddy's" data-desc="Survive five nights as a security guard while animatronics try to get you." data-img="images/fnaf.png"><img src="images/fnaf.png" alt="fnaf"><div class="game-label">FNaF</div></a>
     </div>
 
     <!-- NES -->
@@ -155,12 +151,12 @@
       <h2>Nintendo Entertainment System</h2>
       <div class="section-line"></div>
     </div>
-    <div id="nes-games" class="game-grid retro-grid">
-      <a href="games/emulatorjs/nes/smb/" class="game-card"><img src="images/smb.png" alt="smb1"><div class="game-label">Super Mario Bros.</div></a>
-      <a href="games/emulatorjs/nes/smb3/" class="game-card"><img src="images/smb3.png" alt="smb3"><div class="game-label">Super Mario Bros. 3</div></a>
-      <a href="games/emulatorjs/nes/tetris/" class="game-card"><img src="images/tetris.png" alt="tetris"><div class="game-label">Tetris</div></a>
-      <a href="games/emulatorjs/nes/legendofzelda/" class="game-card"><img src="images/legendofzelda.png" alt="legendofzelda"><div class="game-label">Legend of Zelda</div></a>
-      <a href="games/emulatorjs/nes/punchout/" class="game-card"><img src="images/punchout.png" alt="punchout"><div class="game-label">Punch-Out!!</div></a>
+    <div id="nes-games" class="game-grid">
+      <a href="games/emulatorjs/nes/smb/" class="game-card" data-name="Super Mario Bros." data-desc="The legendary plumber's first adventure. Run, jump, and save Princess Peach." data-img="images/smb.png"><img src="images/smb.png" alt="smb1"><div class="game-label">Super Mario Bros.</div></a>
+      <a href="games/emulatorjs/nes/smb3/" class="game-card" data-name="Super Mario Bros. 3" data-desc="Mario's greatest NES adventure with new suits, worlds, and Bowser's kids." data-img="images/smb3.png"><img src="images/smb3.png" alt="smb3"><div class="game-label">Super Mario Bros. 3</div></a>
+      <a href="games/emulatorjs/nes/tetris/" class="game-card" data-name="Tetris" data-desc="The iconic falling-block puzzle game. Clear lines and survive as long as you can." data-img="images/tetris.png"><img src="images/tetris.png" alt="tetris"><div class="game-label">Tetris</div></a>
+      <a href="games/emulatorjs/nes/legendofzelda/" class="game-card" data-name="The Legend of Zelda" data-desc="Explore the overworld, discover dungeons, and defeat Ganon to rescue Zelda." data-img="images/legendofzelda.png"><img src="images/legendofzelda.png" alt="legendofzelda"><div class="game-label">Legend of Zelda</div></a>
+      <a href="games/emulatorjs/nes/punchout/" class="game-card" data-name="Punch-Out!!" data-desc="Step into the ring and knock out a roster of colorful boxing opponents." data-img="images/punchout.png"><img src="images/punchout.png" alt="punchout"><div class="game-label">Punch-Out!!</div></a>
     </div>
 
     <!-- SNES -->
@@ -169,10 +165,10 @@
       <h2>Super Nintendo</h2>
       <div class="section-line"></div>
     </div>
-    <div id="snes-games" class="game-grid retro-grid">
-      <a href="games/emulatorjs/snes/aladdin/" class="game-card"><img src="images/aladdin.png" alt="aladdin"><div class="game-label">Aladdin</div></a>
-      <a href="games/emulatorjs/snes/supermarioallstars/" class="game-card"><img src="images/supermarioallstars.png" alt="supermarioallstars"><div class="game-label">Super Mario All-Stars</div></a>
-      <a href="games/emulatorjs/snes/supermarioworld/" class="game-card"><img src="images/supermarioworld.png" alt="supermarioworld"><div class="game-label">Super Mario World</div></a>
+    <div id="snes-games" class="game-grid">
+      <a href="games/emulatorjs/snes/aladdin/" class="game-card" data-name="Aladdin" data-desc="Swing your sword and magic carpet through Agrabah in this SNES classic." data-img="images/aladdin.png"><img src="images/aladdin.png" alt="aladdin"><div class="game-label">Aladdin</div></a>
+      <a href="games/emulatorjs/snes/supermarioallstars/" class="game-card" data-name="Super Mario All-Stars" data-desc="Four remastered Mario NES classics in one: SMB 1, 2, 3, and The Lost Levels." data-img="images/supermarioallstars.png"><img src="images/supermarioallstars.png" alt="supermarioallstars"><div class="game-label">Super Mario All-Stars</div></a>
+      <a href="games/emulatorjs/snes/supermarioworld/" class="game-card" data-name="Super Mario World" data-desc="Explore Dinosaur Land with Yoshi in one of the greatest platformers ever made." data-img="images/supermarioworld.png"><img src="images/supermarioworld.png" alt="supermarioworld"><div class="game-label">Super Mario World</div></a>
     </div>
 
     <!-- N64 -->
@@ -181,9 +177,9 @@
       <h2>Nintendo 64</h2>
       <div class="section-line"></div>
     </div>
-    <div id="n64-games" class="game-grid retro-grid">
-      <a href="games/emulatorjs/n64/ocarinaoftime/" class="game-card"><img src="images/ocarinaoftime.png" alt="ocarinaoftime"><div class="game-label">Ocarina of Time</div></a>
-      <a href="games/emulatorjs/n64/supermario64/" class="game-card"><img src="images/supermario64.png" alt="supermario64"><div class="game-label">Super Mario 64</div></a>
+    <div id="n64-games" class="game-grid">
+      <a href="games/emulatorjs/n64/ocarinaoftime/" class="game-card" data-name="Ocarina of Time" data-desc="Link's first 3D adventure. Travel through time to stop Ganondorf and save Hyrule." data-img="images/ocarinaoftime.png"><img src="images/ocarinaoftime.png" alt="ocarinaoftime"><div class="game-label">Ocarina of Time</div></a>
+      <a href="games/emulatorjs/n64/supermario64/" class="game-card" data-name="Super Mario 64" data-desc="The game that defined 3D platformers. Collect stars across Peach's castle." data-img="images/supermario64.png"><img src="images/supermario64.png" alt="supermario64"><div class="game-label">Super Mario 64</div></a>
     </div>
 
     <!-- GAMEBOY -->
@@ -192,16 +188,107 @@
       <h2>Game Boy</h2>
       <div class="section-line"></div>
     </div>
-    <div id="gameboy-games" class="game-grid retro-grid">
-      <a href="games/emulatorjs/gameboy/pokemonblue/" class="game-card"><img src="images/pokemonblue.png" alt="pokemonblue"><div class="game-label">Pokémon Blue</div></a>
-      <a href="games/emulatorjs/gameboy/pokemonred/" class="game-card"><img src="images/pokemonred.png" alt="pokemonred"><div class="game-label">Pokémon Red</div></a>
-      <a href="games/emulatorjs/gameboy/pokemonyellow/" class="game-card"><img src="images/pokemonyellow.png" alt="pokemonyellow"><div class="game-label">Pokémon Yellow</div></a>
-      <a href="games/emulatorjs/gameboy/tetris/" class="game-card"><img src="images/tetrisgb.png" alt="tetrisgb"><div class="game-label">Tetris GB</div></a>
+    <div id="gameboy-games" class="game-grid">
+      <a href="games/emulatorjs/gameboy/pokemonblue/" class="game-card" data-name="Pokémon Blue" data-desc="Catch, train, and battle Pokémon on your journey to become the Champion." data-img="images/pokemonblue.png"><img src="images/pokemonblue.png" alt="pokemonblue"><div class="game-label">Pokémon Blue</div></a>
+      <a href="games/emulatorjs/gameboy/pokemonred/" class="game-card" data-name="Pokémon Red" data-desc="The original Pokémon adventure. Collect all 151 and defeat the Elite Four." data-img="images/pokemonred.png"><img src="images/pokemonred.png" alt="pokemonred"><div class="game-label">Pokémon Red</div></a>
+      <a href="games/emulatorjs/gameboy/pokemonyellow/" class="game-card" data-name="Pokémon Yellow" data-desc="Follow Pikachu's footsteps in the anime-inspired version of the original games." data-img="images/pokemonyellow.png"><img src="images/pokemonyellow.png" alt="pokemonyellow"><div class="game-label">Pokémon Yellow</div></a>
+      <a href="games/emulatorjs/gameboy/tetris/" class="game-card" data-name="Tetris GB" data-desc="The original Game Boy version of Tetris — the game that launched a legend." data-img="images/tetrisgb.png"><img src="images/tetrisgb.png" alt="tetrisgb"><div class="game-label">Tetris GB</div></a>
+    </div>
+
+    <!-- ADMIN-ADDED GAMES (rendered by JS) -->
+    <div id="adminSection" style="display:none">
+      <div class="section-header">
+        <span class="section-tag" style="background:#22c55e">NEW</span>
+        <h2>Added Games</h2>
+        <div class="section-line"></div>
+      </div>
+      <div id="adminGames" class="game-grid"></div>
     </div>
 
     <div class="footer-glow"></div>
-
   </main>
+
+  <!-- ── GAME POPUP ───────────────────────────────────── -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-card" id="popupCard">
+      <button class="popup-close" id="popupClose" aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="popup-hero">
+        <img id="popupImg" src="" alt="">
+      </div>
+      <div class="popup-body">
+        <h2 class="popup-title" id="popupTitle"></h2>
+        <p class="popup-desc" id="popupDesc"></p>
+        <a class="popup-start" id="popupStart" href="#">
+          <i class="fa-solid fa-play"></i> Start Game
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ADMIN TRIGGER ────────────────────────────────── -->
+  <button class="admin-fab" id="adminFab" title="Admin Panel">
+    <i class="fa-solid fa-lock"></i>
+  </button>
+
+  <!-- ── ADMIN PASSWORD GATE ──────────────────────────── -->
+  <div class="popup-overlay" id="adminGate">
+    <div class="admin-gate-card">
+      <h2><i class="fa-solid fa-shield-halved"></i> Admin Access</h2>
+      <p>Enter the password to continue</p>
+      <input type="password" id="adminPwInput" placeholder="Password..." autocomplete="off">
+      <div class="admin-gate-row">
+        <button class="admin-gate-cancel" id="adminGateCancel">Cancel</button>
+        <button class="admin-gate-submit" id="adminGateSubmit">Enter</button>
+      </div>
+      <p class="admin-gate-err" id="adminGateErr"></p>
+    </div>
+  </div>
+
+  <!-- ── ADMIN PANEL ──────────────────────────────────── -->
+  <div class="popup-overlay" id="adminPanel">
+    <div class="admin-panel-card">
+      <div class="admin-panel-header">
+        <h2><i class="fa-solid fa-gauge-high"></i> Admin Center</h2>
+        <button class="popup-close" id="adminPanelClose"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Add game form -->
+      <div class="admin-section-label">Add a New Game</div>
+      <div class="admin-add-form">
+        <input type="text"  id="aName"  placeholder="Game name"          class="admin-input">
+        <input type="text"  id="aUrl"   placeholder="Game URL (games/…)" class="admin-input">
+        <input type="text"  id="aImg"   placeholder="Image URL (images/…)" class="admin-input">
+        <textarea           id="aDesc"  placeholder="Short description…" class="admin-input admin-textarea" rows="2"></textarea>
+        <button class="admin-add-btn" id="adminAddBtn"><i class="fa-solid fa-plus"></i> Add Game</button>
+      </div>
+
+      <!-- Game list -->
+      <div class="admin-section-label" style="margin-top:1.5rem">All Games <span id="adminGameCount" class="admin-count"></span></div>
+      <div class="admin-search-wrap">
+        <i class="fas fa-search"></i>
+        <input type="text" id="adminSearch" placeholder="Filter games..." class="admin-input" style="border-radius:8px">
+      </div>
+      <div class="admin-game-list" id="adminGameList"></div>
+    </div>
+  </div>
+
+  <!-- Edit modal -->
+  <div class="popup-overlay" id="editModal">
+    <div class="admin-gate-card" style="max-width:460px">
+      <h2><i class="fa-solid fa-pen"></i> Edit Game</h2>
+      <input type="hidden" id="editIndex">
+      <input type="text"  id="editName" placeholder="Game name"    class="admin-input">
+      <input type="text"  id="editUrl"  placeholder="Game URL"     class="admin-input">
+      <input type="text"  id="editImg"  placeholder="Image URL"    class="admin-input">
+      <textarea           id="editDesc" placeholder="Description…" class="admin-input admin-textarea" rows="2"></textarea>
+      <div class="admin-gate-row">
+        <button class="admin-gate-cancel" id="editCancel">Cancel</button>
+        <button class="admin-gate-submit" id="editSave">Save Changes</button>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
