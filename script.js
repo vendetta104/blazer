@@ -373,12 +373,8 @@ document.getElementById('adminPanel').addEventListener('click', e => {
   }
 });
 
-/* ── 4. CARD ENTRANCE ANIMATIONS ────────────────────── */
-function animateCard(card, delayMs) {
-  card.style.opacity   = '0';
-  card.style.transform = 'translateY(16px)';
-  card.style.transition = `opacity 0.4s ${delayMs}ms ease, transform 0.4s ${delayMs}ms ease, box-shadow 0.25s, border-color 0.25s`;
-}
+/* ── 4. CARD ENTRANCE ANIMATIONS + PLAY BUTTON INJECTION ── */
+const PLAY_SVG = `<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M3 2.5l10 5.5-10 5.5z"/></svg>`;
 
 const cardObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -390,7 +386,22 @@ const cardObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.05 });
 
+function animateCard(card, delayMs) {
+  card.style.opacity   = '0';
+  card.style.transform = 'translateY(16px)';
+  card.style.transition = `opacity 0.4s ${delayMs}ms ease, transform 0.4s ${delayMs}ms ease, box-shadow 0.25s, border-color 0.25s`;
+}
+
+// Inject play button into every game/feat card
 document.querySelectorAll('.game-card, .feat-card').forEach((card, i) => {
+  // Play button
+  const btn = document.createElement('div');
+  btn.className = 'card-play';
+  btn.innerHTML = PLAY_SVG;
+  btn.setAttribute('aria-hidden', 'true');
+  card.appendChild(btn);
+
+  // Entrance animation
   animateCard(card, (i % 10) * 35);
   cardObserver.observe(card);
 });
