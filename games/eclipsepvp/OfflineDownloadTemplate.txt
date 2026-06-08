@@ -90,6 +90,32 @@ ${classes_js}
 			launchSkipCountdown = true;
 			window.eaglercraftXOpts.showBootMenuOnLaunch = true;
 		});
+
+		// %%%%% Pre-added servers %%%%%
+		(function() {
+			var SERVERS_KEY = "servers";
+			var existingRaw = localStorage.getItem(SERVERS_KEY);
+			var existing = [];
+			try { existing = existingRaw ? JSON.parse(existingRaw) : []; } catch(e) { existing = []; }
+
+			var preAdded = [
+				{ name: "Eclipse PVP",    addr: "wss://YOUR_SERVER_1_ADDRESS/", icon: "" },
+				{ name: "Another Server", addr: "wss://YOUR_SERVER_2_ADDRESS/", icon: "" },
+				{ name: "Yet Another",    addr: "wss://YOUR_SERVER_3_ADDRESS/", icon: "" }
+			];
+
+			// Only inject servers not already in the list (matched by address)
+			var existingAddrs = existing.map(function(s) { return s.addr; });
+			var toAdd = preAdded.filter(function(s) { return existingAddrs.indexOf(s.addr) === -1; });
+
+			if(toAdd.length > 0) {
+				// Pre-added servers appear at the top of the list
+				var merged = toAdd.concat(existing);
+				localStorage.setItem(SERVERS_KEY, JSON.stringify(merged));
+			}
+		})();
+		// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 	});
 })();
 </script>
