@@ -28,7 +28,11 @@
 						logInvalidCerts: true,
 						crashOnUncaughtExceptions: true,
 						servers: [
-							{ addr: "ws://localhost:8081/", name: "Local test server" }
+							{ addr: "wss://mc.voidsent.net/", name: "Voidsent" },
+							{ addr: "wss://arch.mc/", name: "ArchMC" },
+							{ addr: "wss://krypticmc.net/", name: "KrypticMC" },							{ addr: "wss://mc.voidsent.net/", name: "Voidsent" },
+							{ addr: "wss://cryptmc.eagler.host/", name: "CryptMC" },
+							{ addr: "wss://pixelarena.ice.mom", name: "EagPixel" }
 						],
 						relays: [
 							{ addr: "wss://relay.deev.is/", comment: "lax1dude relay #1", primary: relayId === 0 },
