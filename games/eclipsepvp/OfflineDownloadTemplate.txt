@@ -30,7 +30,7 @@ Compile it yourself here: https://gitlab.com/lax1dude/eaglercraftx-1.8/
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 <meta name="description" content="EaglercraftX 1.8 Offline" />
 <meta name="keywords" content="eaglercraft, eaglercraftx, minecraft, 1.8, 1.8.8" />
-<title>EaglercraftX 1.8</title>
+<title>Eclipse Client | 1.8.8</title>
 <meta property="og:locale" content="en-US" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="EaglercraftX 1.8 Offline" />
@@ -90,32 +90,6 @@ ${classes_js}
 			launchSkipCountdown = true;
 			window.eaglercraftXOpts.showBootMenuOnLaunch = true;
 		});
-
-		// %%%%% Pre-added servers %%%%%
-		(function() {
-			var SERVERS_KEY = "servers";
-			var existingRaw = localStorage.getItem(SERVERS_KEY);
-			var existing = [];
-			try { existing = existingRaw ? JSON.parse(existingRaw) : []; } catch(e) { existing = []; }
-
-			var preAdded = [
-				{ name: "Eclipse PVP",    addr: "wss://YOUR_SERVER_1_ADDRESS/", icon: "" },
-				{ name: "Another Server", addr: "wss://YOUR_SERVER_2_ADDRESS/", icon: "" },
-				{ name: "Yet Another",    addr: "wss://YOUR_SERVER_3_ADDRESS/", icon: "" }
-			];
-
-			// Only inject servers not already in the list (matched by address)
-			var existingAddrs = existing.map(function(s) { return s.addr; });
-			var toAdd = preAdded.filter(function(s) { return existingAddrs.indexOf(s.addr) === -1; });
-
-			if(toAdd.length > 0) {
-				// Pre-added servers appear at the top of the list
-				var merged = toAdd.concat(existing);
-				localStorage.setItem(SERVERS_KEY, JSON.stringify(merged));
-			}
-		})();
-		// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 	});
 })();
 </script>
